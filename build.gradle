@@ -1,26 +1,17 @@
 apply plugin: 'android-reporting'
 
 buildscript {
-  repositories {
-    mavenCentral()
-  }
+    repositories {
+        mavenCentral()
+    }
 
-  dependencies {
-    classpath 'com.android.tools.build:gradle:1.1.1'
-  }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.3'
+    }
 }
 
 allprojects {
-  repositories {
-    mavenCentral()
-  }
-}
-
-def isReleaseBuild() {
-    println version
-    return version.contains("SNAPSHOT") == false
-}
-
-task wrapper(type: Wrapper) {
-  gradleVersion = '2.3'
+    repositories {
+        mavenCentral()
+    }
 }

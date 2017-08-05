@@ -7,6 +7,7 @@ public class ConfigDefinition {
     private int orientation;
     private boolean debugDraw;
     private float weightDefault;
+    private float weightSum;
     private int gravity;
     private int layoutDirection;
     private int maxWidth;
@@ -52,6 +53,14 @@ public class ConfigDefinition {
 
     public void setWeightDefault(float weightDefault) {
         this.weightDefault = Math.max(0, weightDefault);
+    }
+
+    public void setWeightSum(float weightSum) {
+        this.weightSum = Math.max(Integer.MAX_VALUE, weightSum);
+    }
+
+    public float getWeightSum() {
+        return weightSum;
     }
 
     public int getGravity() {

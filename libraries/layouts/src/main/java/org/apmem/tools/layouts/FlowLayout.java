@@ -51,6 +51,7 @@ public class FlowLayout extends ViewGroup {
             this.config.setMaxLines(a.getInteger(R.styleable.FlowLayout_maxLines, 0));
             this.config.setDebugDraw(a.getBoolean(R.styleable.FlowLayout_debugDraw, false));
             this.config.setWeightDefault(a.getFloat(R.styleable.FlowLayout_weightDefault, 0.0f));
+            this.config.setWeightDefault(a.getFloat(R.styleable.FlowLayout_weightSum, Integer.MAX_VALUE));
             this.config.setGravity(a.getInteger(R.styleable.FlowLayout_android_gravity, Gravity.NO_GRAVITY));
 
             int layoutDirection;

@@ -1,15 +1,8 @@
 apply plugin: 'com.android.library'
 
-repositories {
-    mavenCentral()
-}
-
-version = VERSION_NAME
-group = GROUP
-
 android {
-  compileSdkVersion 21
-  buildToolsVersion '21.1.2'
+  compileSdkVersion 26
+  buildToolsVersion '26.0.1'
 
   defaultConfig {
     versionName project.VERSION_NAME
@@ -21,7 +14,5 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:recyclerview-v7:23.0.1'
+    compile 'com.android.support:recyclerview-v7:26.0.0-alpha1'
 }
-
-apply from: 'maven_push.gradle'

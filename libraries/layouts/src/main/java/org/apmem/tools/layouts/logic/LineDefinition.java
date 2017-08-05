@@ -32,6 +32,17 @@ public class LineDefinition {
         return lineLength + child.getLength() + child.getSpacingLength() <= config.getMaxLength();
     }
 
+    private boolean isFullWeight() {
+        float weightSum = 0;
+        for (ViewDefinition view : views) {
+            weightSum += view.getWeight();
+            if (weightSum > config.getWeightSum()) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     public int getLineStartThickness() {
         return lineStartThickness;
     }
@@ -71,6 +82,7 @@ public class LineDefinition {
     public int getX() {
         return this.config.getOrientation() == CommonLogic.HORIZONTAL ? this.lineStartLength : this.lineStartThickness;
     }
+
     public int getY() {
         return this.config.getOrientation() == CommonLogic.HORIZONTAL ? this.lineStartThickness : this.lineStartLength;
     }
